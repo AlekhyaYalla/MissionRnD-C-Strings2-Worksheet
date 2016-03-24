@@ -10,6 +10,7 @@ namespace spec
 	{
 	public:
 
+
 		TEST_METHOD(NormalStringLastword)
 		{
 			char sentences[][100] = {"abc is a word","he he","   ","d ab   ","  x","asd324","","a"};

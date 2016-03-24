@@ -18,9 +18,27 @@ NOTES: Don't create new string , Dont return anything ,you have been given two p
 */
 
 #include <stddef.h>
-
+#include<stdlib.h>
 
 void count_vowels_and_consonants(char *str,int *consonants, int *vowels){
 
-
+	char *p;
+	int i = 0, j = 0;
+	p = str;
+	if (str==NULL)
+	{
+		*consonants = 0;
+		*vowels = 0;
+		return;
+	}
+	while (*p != '\0')	
+	{
+		if (*p == 'a' || *p == 'A' || *p == 'e' || *p == 'E' || *p == 'i' || *p == 'I' || *p == 'o' || *p == 'O' || *p == 'u' || *p == 'U')
+			j++;
+		else if ((*p >= 65 && *p <= 91) || (*p >= 97 && *p <= 122))
+			i++;
+		p++;
+	}
+	*consonants = i;
+	*vowels = j;
 }
